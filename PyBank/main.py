@@ -52,8 +52,8 @@ with open(csvpath) as csvfile:
     print(f'Average Change: ${avgDelta}\n')
     print(f'Greatest Increase in Profits: {incDate} (${max(deltaArray)})\n')
     print(f'Greatest Decrease in Profits: {decDate} (${min(deltaArray)})\n')
-
-with open('financial_results.txt', 'w') as file:
+file2 = os.path.join('Analysis', 'financial_results.txt')
+with open(file2, 'w') as file:
     file.write("Financial Analysis \n")
     file.write("---------------------------- \n")
     file.write(f'Total Months: {totalMonths}\n')
